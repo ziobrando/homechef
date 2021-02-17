@@ -1,5 +1,8 @@
 package it.avanscoperta.homechef.ricette.domain;
 
+/**
+ * Sarà un Value Object
+ */
 public class Ricetta {
     private final RicettaId ricettaId;
     private final String title;

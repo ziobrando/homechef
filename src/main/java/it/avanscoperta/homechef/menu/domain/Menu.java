@@ -28,10 +28,14 @@ public class Menu {
     }
     
     public boolean isEmpty() {
-        return true; // FIXME
+        return portate.isEmpty();
     }
 
     public void addRicetta(Ricetta ricetta, int persone) {
-        portate.add(ricetta, persone);
+        portate.add(new Portata(ricetta, persone));
+    }
+
+    public boolean containsRicetta(Ricetta ricetta) {
+        return portate.stream().anyMatch(portata -> portata.getRicetta().equals(ricetta));
     }
 }
