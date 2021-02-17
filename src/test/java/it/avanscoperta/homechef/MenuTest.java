@@ -15,17 +15,18 @@ import static org.junit.jupiter.api.Assertions.*;
 @DisplayName("Menu: Unit Tests")
 public class MenuTest {
 
+    User user;
+    MenuId menuId;
 
     @BeforeEach
     void setUp() {
-
+        user = new UserBuilder().build();
+        menuId = MenuId.generate();
     }
 
     @Test
     @DisplayName("Posso creare un menu vuoto")
     public void can_create_empty() {
-        User user = new UserBuilder().build();
-        MenuId menuId = MenuId.generate();
         Menu menuVuoto = Menu.creaVuoto(menuId, user);
 
         assertNotNull(menuVuoto);
@@ -36,6 +37,11 @@ public class MenuTest {
     @DisplayName("Posso aggiungere una ricetta al menu")
     public void can_add_recipe_to_menu() {
         Ricetta ricetta = new RicettaBuilder().build("ricetta");
+
+        Menu menu = Menu.creaVuoto(menuId, user);
+        menu.addRicetta(ricetta, 2);
+
+        assertTrue(menu.containsRicetta(ricetta));
         
     }
 

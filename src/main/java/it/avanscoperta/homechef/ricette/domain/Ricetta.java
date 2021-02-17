@@ -10,6 +10,7 @@ public class Ricetta {
         this.title = title;
     }
 
+    // TODO: Ma perché?
     public static Ricetta creaVuoto(RicettaId ricettaId) {
         return new Ricetta(ricettaId, "Ricetta");
     }

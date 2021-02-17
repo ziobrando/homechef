@@ -3,10 +3,15 @@ package it.avanscoperta.homechef.menu.domain;
 import it.avanscoperta.homechef.ricette.domain.Ricetta;
 import it.avanscoperta.homechef.users.User;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Menu {
     private final MenuId menuId;
     private final User user;
     private final String title;
+
+    List<Portata> portate = new ArrayList<Portata>();
 
     public Menu(MenuId menuId, User user, String title) {
         this.menuId = menuId;
@@ -24,5 +29,9 @@ public class Menu {
     
     public boolean isEmpty() {
         return true; // FIXME
+    }
+
+    public void addRicetta(Ricetta ricetta, int persone) {
+        portate.add(ricetta, persone);
     }
 }
