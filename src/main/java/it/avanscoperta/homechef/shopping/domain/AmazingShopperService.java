@@ -32,7 +32,6 @@ public class AmazingShopperService implements ShopperService {
         portata.getRecipe()
                 .getListaIngredienti()
                 .getIngredienti()
-                .stream()
                 .forEach(ingrediente -> shoppingList.add(resolveItem(ingrediente)));
     }
 
