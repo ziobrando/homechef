@@ -2,6 +2,8 @@ package it.avanscoperta.homechef;
 
 import it.avanscoperta.homechef.menu.domain.Menu;
 import it.avanscoperta.homechef.menu.domain.MenuId;
+import it.avanscoperta.homechef.ricette.builders.RicettaBuilder;
+import it.avanscoperta.homechef.ricette.domain.Ricetta;
 import it.avanscoperta.homechef.users.User;
 import it.avanscoperta.homechef.users.builders.UserBuilder;
 import org.junit.jupiter.api.BeforeEach;
@@ -33,7 +35,8 @@ public class MenuTest {
     @Test
     @DisplayName("Posso aggiungere una ricetta al menu")
     public void can_add_recipe_to_menu() {
-        fail("da fare");
+        Ricetta ricetta = new RicettaBuilder().build("ricetta");
+        
     }
 
 

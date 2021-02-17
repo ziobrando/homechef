@@ -1,5 +1,6 @@
 package it.avanscoperta.homechef.menu.domain;
 
+import it.avanscoperta.homechef.ricette.domain.Ricetta;
 import it.avanscoperta.homechef.users.User;
 
 public class Menu {
@@ -17,6 +18,10 @@ public class Menu {
         return new Menu(menuId, user, "Menu");
     }
 
+    public static Ricetta aggiungiRicetta(Ricetta ricetta) {
+       return null;
+    }
+    
     public boolean isEmpty() {
         return true; // FIXME
     }
