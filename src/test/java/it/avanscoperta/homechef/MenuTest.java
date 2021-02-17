@@ -1,5 +1,9 @@
 package it.avanscoperta.homechef;
 
+import it.avanscoperta.homechef.menu.domain.Menu;
+import it.avanscoperta.homechef.menu.domain.MenuId;
+import it.avanscoperta.homechef.users.User;
+import it.avanscoperta.homechef.users.builders.UserBuilder;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -18,7 +22,12 @@ public class MenuTest {
     @Test
     @DisplayName("Posso creare un menu vuoto")
     public void can_create_empty() {
-        fail("da fare");
+        User user = new UserBuilder().build();
+        MenuId menuId = MenuId.generate();
+        Menu menuVuoto = Menu.creaVuoto(menuId, user);
+
+        assertNotNull(menuVuoto);
+        assertTrue(menuVuoto.isEmpty());
     }
 
     @Test
