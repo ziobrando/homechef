@@ -4,7 +4,7 @@ import it.avanscoperta.homechef.common.domain.Quantity;
 import it.avanscoperta.homechef.menu.domain.ListaIngredienti;
 import it.avanscoperta.homechef.menu.domain.Ingrediente;
 import it.avanscoperta.homechef.menu.domain.Menu;
-import it.avanscoperta.homechef.menu.domain.Recipe;
+import it.avanscoperta.homechef.menu.domain.Ricetta;
 import it.avanscoperta.homechef.recipes.builder.RecipeBuilder;
 import it.avanscoperta.homechef.users.User;
 import it.avanscoperta.homechef.users.builders.UserBuilder;
@@ -21,7 +21,7 @@ public class MenuTest {
     private User user;
     private Menu emptyMenu;
     private ListaIngredienti ingredientiCarbonara;
-    private Recipe carbonara;
+    private Ricetta carbonara;
 
     @BeforeEach
     void setUp() {
@@ -34,7 +34,7 @@ public class MenuTest {
                 new Ingrediente("Uova", Quantity.units(3))
         );
 
-        carbonara = new Recipe("Rigatoni alla Carbonara", ingredientiCarbonara);
+        carbonara = new Ricetta("Rigatoni alla Carbonara", ingredientiCarbonara);
     }
 
     @Test
@@ -55,7 +55,7 @@ public class MenuTest {
     @Test
     @DisplayName("Posso aggiungere più di una ricetta al menu")
     public void can_add_more_recipes_to_menu() {
-        Recipe amatriciana = RecipeBuilder.amatriciana();
+        Ricetta amatriciana = RecipeBuilder.amatriciana();
         Menu serataRomana = Menu.createEmpty("Serata Romana", user);
         serataRomana.addPortata(carbonara, 4);
         serataRomana.addPortata(amatriciana, 4);

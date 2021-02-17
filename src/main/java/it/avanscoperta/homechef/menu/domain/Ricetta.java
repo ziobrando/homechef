@@ -1,10 +1,10 @@
 package it.avanscoperta.homechef.menu.domain;
 
-public class Recipe {
+public class Ricetta {
     private final String headline;
     private final ListaIngredienti listaIngredienti;
 
-    public Recipe(String headline, ListaIngredienti listaIngredienti) {
+    public Ricetta(String headline, ListaIngredienti listaIngredienti) {
         this.headline = headline;
         this.listaIngredienti = listaIngredienti;
     }

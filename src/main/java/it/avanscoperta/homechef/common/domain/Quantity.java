@@ -2,6 +2,9 @@ package it.avanscoperta.homechef.common.domain;
 
 /**
  * This is a value object to deal with quantities.
+ * I just did things quickly here, driven by the need to see good code somewhere else.
+ *
+ * There is probably some library that solves this problem, but I haven't faced the real problem yet.
  */
 public class Quantity {
     private final double qty;

@@ -1,11 +1,9 @@
 package it.avanscoperta.homechef;
 
-import it.avanscoperta.homechef.MenuTest;
 import it.avanscoperta.homechef.menu.domain.Menu;
-import it.avanscoperta.homechef.menu.domain.Recipe;
+import it.avanscoperta.homechef.menu.domain.Ricetta;
 import it.avanscoperta.homechef.menu.domain.ShopperService;
 import it.avanscoperta.homechef.recipes.builder.RecipeBuilder;
-import it.avanscoperta.homechef.shopping.domain.AmazingShopperService;
 import it.avanscoperta.homechef.shopping.domain.ShoppingList;
 import it.avanscoperta.homechef.users.User;
 import it.avanscoperta.homechef.users.builders.UserBuilder;
@@ -45,7 +43,7 @@ public class ShopperServiceTest {
     @Test
     @DisplayName("Un menu semplice produce la lista della spesa.")
     public void a_simple_menu_will_return_the_corresponding_Shopping_list() {
-        Recipe amatriciana = RecipeBuilder.amatriciana();
+        Ricetta amatriciana = RecipeBuilder.amatriciana();
         Menu serataRomana = Menu.fromRecipe(amatriciana, user,4);
 
         ShoppingList shoppingList = service.getShoppingListForMenu(serataRomana);

@@ -3,14 +3,14 @@ package it.avanscoperta.homechef.recipes.builder;
 import it.avanscoperta.homechef.common.domain.Quantity;
 import it.avanscoperta.homechef.menu.domain.Ingrediente;
 import it.avanscoperta.homechef.menu.domain.ListaIngredienti;
-import it.avanscoperta.homechef.menu.domain.Recipe;
+import it.avanscoperta.homechef.menu.domain.Ricetta;
 
 /**
  * A Test data builder that actually knows something.
  */
 public class RecipeBuilder {
-    public static Recipe amatriciana() {
-        return new Recipe("Bucatini all'amatriciana",
+    public static Ricetta amatriciana() {
+        return new Ricetta("Bucatini all'amatriciana",
                 new ListaIngredienti(
                         4,
                         new Ingrediente("Bucatini", Quantity.grams(400)),
