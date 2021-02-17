@@ -2,6 +2,11 @@ package it.avanscoperta.homechef.shopping.domain;
 
 import java.util.Optional;
 
+/**
+ * Sto barando?
+ * ... forse no.
+ */
 public interface ShoppingCatalog {
-    Optional<CatalogItem> findFirst(String label);
+    // TODO: replace with the actual class
+    Optional<Object> findFirst(String label);
 }
